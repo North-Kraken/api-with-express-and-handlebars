@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: victor
+    runs-on: self-hosted
 
     strategy:
       matrix:
