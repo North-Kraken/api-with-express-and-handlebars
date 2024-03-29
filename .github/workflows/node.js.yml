@@ -33,6 +33,7 @@ jobs:
     - run: npm test
   deploy:
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
     - name: Deploy using ssh
@@ -45,7 +46,8 @@ jobs:
         port: 22
         script: |
           cd /opt/node
-          git pull origin master
+          git clone https://github.com/North-Kraken/api-with-express-and-handlebars
+          cd api-with-express-and-handlebars
           git status
           npm install --only=prod
           pm2 restart node
