@@ -47,7 +47,7 @@ jobs:
         script: |
           cd /opt/node
           git config --global user.name "krauss"
-          git clone https://github.com/North-Kraken/api-with-express-and-handlebars
+          git clone https://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@github.com/North-Kraken/api-with-express-and-handlebars
           cd api-with-express-and-handlebars
           git status
           npm install --only=prod
