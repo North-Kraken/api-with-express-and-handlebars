@@ -9,8 +9,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
+
 jobs:
   build:
+    
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,9 +31,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-  deploy:
+  deployment:
     runs-on: almalinux-latest
-
     steps:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
@@ -41,7 +43,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: 22
         script: |
-          cd opt/node
+          cd /opt/node
           git pull origin master
           git status
           npm install --only=prod
