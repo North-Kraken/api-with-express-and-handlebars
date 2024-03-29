@@ -46,6 +46,7 @@ jobs:
         port: 22
         script: |
           cd /opt/node
+          git config --global user.name "krauss"
           git clone https://github.com/North-Kraken/api-with-express-and-handlebars
           cd api-with-express-and-handlebars
           git status
