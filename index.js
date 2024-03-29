@@ -3,7 +3,7 @@ const hbs = require('hbs')
 const routes = require('./routes/routes')
 const path = require('path')
 const app = express()
-const PORT = 4000
+const PORT = 5000
 
 app.set('view engine', hbs)
 app.use('/', routes)
