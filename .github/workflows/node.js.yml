@@ -49,4 +49,4 @@ jobs:
           git pull origin
           git status
           npm install --only=prod
-          pm2 restart node
+          pm2 restart demo-api
