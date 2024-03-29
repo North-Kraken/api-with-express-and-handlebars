@@ -48,5 +48,5 @@ jobs:
           cd /opt/node/api-with-express-and-handlebars
           git pull origin
           git status
-          npm install --only=prod
+          npm install --only=prod --omit=dev
           pm2 restart demo-api
